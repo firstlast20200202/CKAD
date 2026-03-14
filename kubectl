@@ -3,3 +3,6 @@ kubectl run hello-minikube    //deploy an application on a cluster
 kubectl cluster-info
 
 kubectl get nodes
+
+
+crictl is only used to debug
