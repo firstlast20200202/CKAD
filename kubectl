@@ -8,3 +8,6 @@ kubectl get nodes
 crictl   //only used to debug
 
 nerdctl   //for general purpose
+
+pod is infrasturcture of running containers
+image is dependencies and libraries,image is the thing that container runs, cotaner is a running instance of an image
