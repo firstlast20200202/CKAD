@@ -11,8 +11,10 @@ kubectl create -f redis-pod.yaml    //create the pod from the yaml file
 OR
 kubectl run redis -l tier=db --image=redis:alpine    //-l means label
 
-
-
+3. Create a service named redis-service to expose the existing redis pod within the cluster on port 6379.
+Use imperative commands.
+A:
+kubectl expose pod redis --port=6379 --name=redis-service --type=ClusterIP
 
 
 
