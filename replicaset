@@ -13,3 +13,7 @@ A: after editing the file
 k apply -f /root/new-replica-set.yaml
 k delete po -l name=busybox-pod    //-l: label
 as long as it's deleted, replicaset will recreate itself
+
+
+scale:
+kubectl scale rs new-replica-set --replicas=2    //without changing the value in yaml file, in next deployment it would change back to the file value
