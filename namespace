@@ -1,3 +1,14 @@
 k config set-context $(kubectl config current-context) --namespace=dev    //get into namespace dev, afterwards all the performancd would be done in this namespace
 
 k get pods --all-namespace
+
+1. Create a POD in the finance namespace.
+Use the spec given below:
+Name: redis
+Image name: redis
+
+A:
+kubectl run redis --image=redis -n finance
+or
+k config set-context $(kubectl config current-context) --namespace=finance
+kubectl run redis --image=redis
