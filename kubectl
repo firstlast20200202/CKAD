@@ -28,10 +28,10 @@ kubectl get pods
 
 3. Now change the image on this pod to redis.
 Once done, the pod should be in a running state.
-A: Use the kubectl edit command to update the image of the pod to redis.
-kubectl edit pod redis
-Alternatively, if you used a pod definition file then update the image from redis123 to redis in the definition file via Vi or Nano editor and then run kubectl apply command to update the image :-
-kubectl apply -f redis-definition.yaml 
+A: 
+cat redis-definition.yaml
+vi redis-definition.yaml  //edit the file
+kubectl apply -f redis-definition.yaml   //apply the changes
 
 
 
