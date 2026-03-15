@@ -4,3 +4,12 @@ There is an issue with the file, so try to fix it.
 A: Run the command: You can check for apiVersion of replicaset by command kubectl api-resources | grep replicaset
 kubectl explain replicaset | grep VERSION and correct the apiVersion for ReplicaSet.
 Then run the command: kubectl create -f /root/replicaset-definition-1.yaml
+
+2.Fix the original replica set new-replica-set to use the correct image with name as busybox.
+Either delete and recreate the ReplicaSet or update the existing ReplicaSet and then delete all PODs, so new ones with the correct image will be created.
+If you opt to delete the ReplicaSet and recreate it, please refer to the file named new-replica-set.yaml, which is saved in the /root/ directory for your convenience and fix it.
+
+A: after editing the file
+k apply -f /root/new-replica-set.yaml
+k delete po -l name=busybox-pod    //-l: label
+as long as it's deleted, replicaset will recreate itself
