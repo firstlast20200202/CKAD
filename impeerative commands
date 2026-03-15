@@ -1,0 +1,21 @@
+1. Deploy a pod named nginx-pod using the nginx:alpine image.
+Use imperative commands only.
+A: kubectl run nginx-pod --image=nginx:alpine
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
