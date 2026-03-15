@@ -1,0 +1,9 @@
+1. Create a new Deployment with the below attributes using your own deployment definition file.
+Name: httpd-frontend;
+Replicas: 3;
+Image: httpd:2.4-alpine
+
+A: 
+k create deployment --help    //find the pattern 
+k create deployment httpd-frontend --image=httpd:2.4-alpine --replicas=3
+k get deploy    //verify
