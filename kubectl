@@ -13,6 +13,27 @@ pod is infrasturcture of running containers
 image is dependencies and libraries,image is the thing that container runs, cotaner is a running instance of an image
 
 lab:
-Create a new pod using the nginx image.
-kubectl run nginx --image=nginx
+1. Create a new pod using the nginx image.
+A: kubectl run nginx --image=nginx
+
+2. Create a new pod with the name redis and the image redis123.
+Utilize a pod-definition YAML file. Please note that the image name redis123 is intentionally incorrect. Do NOT correct the image at this stage; you will address this in the subsequent task.
+A: We use kubectl run command with --dry-run=client -o yaml option to create a manifest file :-
+kubectl run redis --image=redis123 --dry-run=client -o yaml > redis-definition.yaml
+After that, using kubectl create -f command to create a resource from the manifest file :-
+kubectl create -f redis-definition.yaml 
+Verify the work by running kubectl get command :-
+kubectl get pods
+
+3. Now change the image on this pod to redis.
+Once done, the pod should be in a running state.
+A: Use the kubectl edit command to update the image of the pod to redis.
+kubectl edit pod redis
+If you used a pod definition file then update the image from redis123 to redis in the definition file via Vi or Nano editor and then run kubectl apply command to update the image :-
+kubectl apply -f redis-definition.yaml 
+
+
+
+
+
 
