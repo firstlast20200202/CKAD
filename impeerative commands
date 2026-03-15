@@ -2,8 +2,12 @@
 Use imperative commands only.
 A: kubectl run nginx-pod --image=nginx:alpine
 
-
-
+2. Deploy a redis pod using the redis:alpine image with the labels tier=db.
+You can use imperative commands either to create the pod with the labels or to generate a pod definition file, add the labels, and then create the pod from that file.
+A: 
+kubectl run redis --image=redis:alpine --dry-run=client -oyaml > redis-pod.yaml    //generate a file
+Add given labels tier=db under the metadata section.
+kubectl create -f redis-pod.yaml    //create the pod from the yaml file
 
 
 
