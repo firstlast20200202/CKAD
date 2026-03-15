@@ -23,3 +23,5 @@ other commands:
 k explain replicaset    //explain every field in yaml file
 
 k get rs    //short for replicasets
+
+k edit rs <rs name>    //will get into edit mode of the yaml file
