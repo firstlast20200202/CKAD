@@ -1,0 +1,1 @@
+k config set-context $(kubectl config current-context) --namespace=dev    //get into namespace dev, afterwards all the performancd would be done in this namespace
