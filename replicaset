@@ -17,7 +17,7 @@ note: when update a replicaset, the pods are not auto-recreated, either delete a
 
 scale:
 kubectl scale rs new-replica-set --replicas=2    //without changing the value in yaml file, in next deployment it would change back to the file value
-
+k edit rs <rs name>    //edit the file
 
 other commands:
 k explain replicaset    //explain every field in yaml file
