@@ -8,7 +8,8 @@ A:
 kubectl run redis --image=redis:alpine --dry-run=client -oyaml > redis-pod.yaml    //generate a file
 Add given labels tier=db under the metadata section.
 kubectl create -f redis-pod.yaml    //create the pod from the yaml file
-
+OR
+kubectl run redis -l tier=db --image=redis:alpine    //-l means label
 
 
 
