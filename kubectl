@@ -21,7 +21,7 @@ Utilize a pod-definition YAML file. Please note that the image name redis123 is 
 A: can be done just by 'kubectl run redis --image=redis123'; if we want to generte a yaml file, we add '--dry-run=client -o yaml'; add a name '> redis-definition.yaml'
 We use kubectl run command with --dry-run=client -o yaml option to create a manifest file :-
 kubectl run redis --image=redis123 --dry-run=client -o yaml > redis-definition.yaml
-After that, using kubectl create -f command to create a resource from the manifest file :-
+After that, using kubectl create -f command to create a resource from the manifest file :-  //create a pod using the yaml file
 kubectl create -f redis-definition.yaml 
 Verify the work by running kubectl get command :-
 kubectl get pods
