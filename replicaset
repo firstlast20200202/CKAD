@@ -20,8 +20,10 @@ kubectl scale rs new-replica-set --replicas=2    //without changing the value in
 k edit rs <rs name>    //edit the file
 
 other commands:
-k explain replicaset    //explain every field in yaml file
-
+k api-resources    //list all the types of resources with apiversion and kind etc.
+k explain replicaset    //explain every high level field in yaml file
+k explain pods.spec    //add <.field> to get more details of a specific field
+k explain pods --recursive    //list all the fields in the yaml file format including the fields are not commonly used, so it would show under which section it should be used
 
 
 
