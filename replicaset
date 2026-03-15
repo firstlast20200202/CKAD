@@ -21,3 +21,5 @@ kubectl scale rs new-replica-set --replicas=2    //without changing the value in
 
 other commands:
 k explain replicaset    //explain every field in yaml file
+
+k get rs    //short for replicasets
