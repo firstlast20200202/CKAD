@@ -13,7 +13,7 @@ A: after editing the file
 k apply -f /root/new-replica-set.yaml
 k delete po -l name=busybox-pod    //-l: label
 as long as it's deleted, replicaset will recreate itself
-
+note: when update a replicaset, the pods are not auto-recreated, either delete and recreate the whole replicaset, or delete all the pods, so the replicaset will auto-recreate pods, 
 
 scale:
 kubectl scale rs new-replica-set --replicas=2    //without changing the value in yaml file, in next deployment it would change back to the file value
@@ -21,6 +21,13 @@ kubectl scale rs new-replica-set --replicas=2    //without changing the value in
 
 other commands:
 k explain replicaset    //explain every field in yaml file
+
+
+
+
+
+
+
 
 k get rs    //short for replicasets
 
