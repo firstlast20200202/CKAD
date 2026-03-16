@@ -21,7 +21,10 @@ kubectl expose pod redis --port=6379 --name=redis-service --type=ClusterIP
 The target port for the service should be 80. Try to do this with as few steps as possible.
 A:
 k run httpd --image=httpd:alpine --port=80 --expose=true    //--expose=true create a ClusterIP service associated with the pod, requires '--port'.
-
+verify:
+k get pod
+k get svc
+k describe svc httpd    //check: Selector: run=httpd; Endpoint with the port number
 
 
 
