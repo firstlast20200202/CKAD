@@ -1,6 +1,7 @@
 1. Deploy a pod named nginx-pod using the nginx:alpine image.
 Use imperative commands only.
-A: kubectl run nginx-pod --image=nginx:alpine
+A: 
+kubectl run nginx-pod --image=nginx:alpine
 
 2. Deploy a redis pod using the redis:alpine image with the labels tier=db.
 You can use imperative commands either to create the pod with the labels or to generate a pod definition file, add the labels, and then create the pod from that file.
@@ -16,7 +17,10 @@ Use imperative commands.
 A:
 kubectl expose pod redis --port=6379 --name=redis-service --type=ClusterIP
 
-
+4. Create a pod called httpd using the image httpd:alpine in the default namespace. Next, create a service of type ClusterIP by the same name (httpd). 
+The target port for the service should be 80. Try to do this with as few steps as possible.
+A:
+k run httpd --image=httpd:alpine --port=80 --expose=true    //--expose=true create a ClusterIP service associated with the pod, requires '--port'.
 
 
 
