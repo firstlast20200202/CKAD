@@ -1,2 +1,21 @@
 docker images
 
+1. We just downloaded the code of an application. What is the base image used in the Dockerfile?
+Inspect the Dockerfile in the webapp-color directory.
+A:
+You can either open the file using vi /root/webapp-color/Dockerfile (or using commands such as cat/more/less/vim e.t.c) and 
+look for the FROM instruction or search for it directly using grep -i FROM /root/webapp-color/Dockerfile.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
