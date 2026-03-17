@@ -7,20 +7,15 @@ A:
 You can either open the file using vi /root/webapp-color/Dockerfile (or using commands such as cat/more/less/vim e.t.c) and 
 look for the FROM instruction or search for it directly using grep -i FROM /root/webapp-color/Dockerfile.
 
-
-
 build an image:
 docker build -t webapp-color .
-
 
 run an instance of the image and publish port 8080 on the container to 8282 on the host:
 docker run -p 8282:8080 webapp-color
 
-
-
 goota re-do 43 Lab
 
-
+docker history /root/<image name>    //look up the size of each layer
 
 
 
