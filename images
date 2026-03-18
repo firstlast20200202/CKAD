@@ -16,6 +16,7 @@ docker run -p 8282:8080 webapp-color
 goota re-do 43 Lab
 
 44 ask: whats the purpose of sleep
+pod-definition file overwrites docker file ???whats difference of docker and pod
 
 docker history /root/<image name>    //look up the size of each layer
 
