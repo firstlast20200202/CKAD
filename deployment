@@ -2,18 +2,25 @@
 Name: httpd-frontend;
 Replicas: 3;
 Image: httpd:2.4-alpine
-
 A: 
 k create deployment --help    //find the pattern 
 k create deployment httpd-frontend --image=httpd:2.4-alpine --replicas=3
 k get deploy    //verify: makr sure it's in ready status
 
+
 A quick note on editing pods and deployments:
 on a running pod, there are lots of fields in specifications that cannot be edited, instead we deal with it in this way:
 option 1:
 kubectl edit pod <pod name>  //a temp file will be generated 
+kubectl delete pod webapp
+kubectl create -f /tmp/kubectl-edit-ccvrq.yaml    //create a new pod with your changes using the temporary file
+
+option 2:
+kubectl get pod webapp -o yaml > my-new-pod.yaml    //extract the pod definition in YAML format to a file using the command
+vi my-new-pod.yaml
+kubectl delete pod webapp
+kubectl create -f my-new-pod.yaml
 
 
-
-
-
+Edit Deployments:
+kubectl edit deployment my-deployment
