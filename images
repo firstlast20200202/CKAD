@@ -25,6 +25,13 @@ If required, run an instance of the image to figure it out.
 A:
 Run docker run python:3.6 cat /etc/*release* command.              ?????????????????????????????????????
 
+5. Build a new smaller docker image by modifying the same Dockerfile and name it webapp-color and tag it lite.
+Hint: Find a smaller base image for python:3.6. Make sure the final image is less than 150MB.
+A: 
+In the webapp-color directory, run the ls -l command to list the Dockerfile and other files.
+And modify Dockerfile to use python:3.6-alpine image and then build using docker build -t webapp-color:lite .
+
+
 44 ask: whats the purpose of sleep
 pod-definition file overwrites docker file ???whats difference of docker and pod
 
