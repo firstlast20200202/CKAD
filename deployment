@@ -7,6 +7,30 @@ k create deployment --help    //find the pattern
 k create deployment httpd-frontend --image=httpd:2.4-alpine --replicas=3
 k get deploy    //verify: makr sure it's in ready status
 
+2. Task: Create a Kubernetes Pod that runs a web application with a green background.
+Requirements:
+Pod Name: webapp-green
+Docker Image: kodekloud/webapp-color
+The application must display a green background instead of the default blue.
+Pass the command-line argument: --color=green as container arguments (args), not as a command.
+A:
+step 1. Create a yaml file with the following content:
+apiVersion: v1 
+kind: Pod 
+metadata:
+  name: webapp-green
+  labels:
+      name: webapp-green 
+spec:
+  containers:
+  - name: simple-webapp
+    image: kodekloud/webapp-color
+    args: ["--color=green"]
+step 22. Commands to Deploy:
+kubectl apply -f <file_name>.yaml
+kubectl get pods
+kubectl describe pod webapp-green
+
 
 A quick note on editing pods and deployments:
 on a running pod, there are lots of fields in specifications that cannot be edited, instead we deal with it in this way:
@@ -24,3 +48,4 @@ kubectl create -f my-new-pod.yaml
 
 Edit Deployments:
 kubectl edit deployment my-deployment
+
