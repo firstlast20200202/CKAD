@@ -1,6 +1,5 @@
 $ docker images
 
-
 1. We just downloaded the code of an application. What is the base image used in the Dockerfile?
 Inspect the Dockerfile in the webapp-color directory.
 A:
@@ -16,7 +15,6 @@ $ pwd
 Now, run the docker build command within that directory :-
 $ docker build -t webapp-color . 
 NOTE: At the end of the command, we used the "." (dot) symbol which indicates for the current directory, so you need to run this command from within the directory that has the Dockerfile.
-
 
 3. Run an instance of the image webapp-color and publish port 8080 on the container to 8282 on the host.
 A:
