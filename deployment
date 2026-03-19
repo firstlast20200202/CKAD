@@ -7,3 +7,13 @@ A:
 k create deployment --help    //find the pattern 
 k create deployment httpd-frontend --image=httpd:2.4-alpine --replicas=3
 k get deploy    //verify: makr sure it's in ready status
+
+A quick note on editing pods and deployments:
+on a running pod, there are lots of fields in specifications that cannot be edited, instead we deal with it in this way:
+option 1:
+kubectl edit pod <pod name>  //a temp file will be generated 
+
+
+
+
+
