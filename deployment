@@ -35,9 +35,12 @@ kubectl describe pod webapp-green
 A quick note on editing pods and deployments:
 on a running pod, there are lots of fields in specifications that cannot be edited, instead we deal with it in this way:
 option 1:
-kubectl edit pod <pod name>  //a temp file will be generated 
+kubectl edit pod <pod-name>  //a temp file will be generated 
 kubectl delete pod webapp
 kubectl create -f /tmp/kubectl-edit-ccvrq.yaml    //create a new pod with your changes using the temporary file
+or
+kubectl edit pod <pod-name>  //a copy of your changes has been stored to "/tmp/XXXXXXXX.yaml"
+kubectl replace --force -f /tmp/XXXXXXXX.yaml
 
 option 2:
 kubectl get pod webapp -o yaml > my-new-pod.yaml    //extract the pod definition in YAML format to a file using the command
