@@ -20,7 +20,7 @@ NOTE: At the end of the command, we used the "." (dot) symbol which indicates fo
 A:
 docker run -p 8282:8080 webapp-color
 
-11. What is the base Operating System used by the python:3.6 image?
+4. What is the base Operating System used by the python:3.6 image?
 If required, run an instance of the image to figure it out.
 A:
 Run 'docker run python:3.6 cat /etc/*release*' command.              
