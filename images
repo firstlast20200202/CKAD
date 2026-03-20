@@ -23,7 +23,9 @@ docker run -p 8282:8080 webapp-color
 11. What is the base Operating System used by the python:3.6 image?
 If required, run an instance of the image to figure it out.
 A:
-Run docker run python:3.6 cat /etc/*release* command.              ?????????????????????????????????????
+Run 'docker run python:3.6 cat /etc/*release*' command.              
+note: /etc/*release* gives information of your operating system
+in this case, if run 'cat /etc/*release*' only, it shows your computer's operating system information
 
 5. Build a new smaller docker image by modifying the same Dockerfile and name it webapp-color and tag it lite.
 Hint: Find a smaller base image for python:3.6. Make sure the final image is less than 150MB.
@@ -32,8 +34,9 @@ In the webapp-color directory, run the ls -l command to list the Dockerfile and 
 And modify Dockerfile to use python:3.6-alpine image and then build using docker build -t webapp-color:lite .
 
 
-44 ask: whats the purpose of sleep
-pod-definition file overwrites docker file ???whats difference of docker and pod
+the purpose of sleep: keeps the container running
+
+pod-definition file overwrites docker file: pod file is for container, docker file is for image, so when container is running on image, the configuration of pod will overwrite that of image
 
 docker history /root/<image name>    //look up the size of each layer
 
