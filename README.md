@@ -1,5 +1,5 @@
 tomorrow morning 
 
-till 58
+55 - 58
 
 gorgiea tech finish tomorrow
