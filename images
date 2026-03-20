@@ -36,9 +36,14 @@ And modify Dockerfile to use python:3.6-alpine image and then build using docker
 
 the purpose of sleep: keeps the container running
 
-pod-definition file overwrites docker file: pod file is for container, docker file is for image, so when container is running on image, the configuration of pod will overwrite that of image
 
 docker history /root/<image name>    //look up the size of each layer
+
+
+pod-definition file overwrites docker file: pod file is for container, docker file is for image, so when container is running on image, the configuration of pod will overwrite that of image
+in docker file it has: entrypoint and CMD
+in pod definition file it has: command and args under spec.containers
+command overwrites entrypoint, args overwrites CMD
 
 
 
