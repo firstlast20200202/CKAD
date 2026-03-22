@@ -18,3 +18,6 @@ in the edit pod step, just replace the previously set runAsUser: 1010 with
 securityContext:        # Updated securityContext on container level
       capabilities:
         add: ["SYS_TIME"]
+note: this part is iriginally under spec section, now gotta move to spec.containers.-command, should be align to command
+
+
