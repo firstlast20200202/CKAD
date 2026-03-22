@@ -2,3 +2,15 @@
 A:
 k exec ubuntu-sleeper -- whoami
 
+2. Edit the pod ubuntu-sleeper running in the default namespace, to run the sleep process with user ID 1010.
+A:
+step 1, kubectl get pod ubuntu-sleeper -o yaml > ubuntu-sleeper.yaml
+step 2, update the ubuntu-sleeper.yaml to run as user 1010 as follows (Note that Kubernetes has an empty default securityContext 
+that is automatically added to pod definitions, so make sure to remove or update this one):
+securityContext: 
+    runAsUser: 1010
+step 3, kubectl delete po ubuntu-sleeper --force
+kubectl apply -f ubuntu-sleeper.yaml
+
+
+
