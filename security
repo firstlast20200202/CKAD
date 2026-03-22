@@ -1,0 +1,4 @@
+1. What is the user to execute the sleep process within the ubuntu-sleeper pod
+A:
+k exec ubuntu-sleeper -- whoami
+
