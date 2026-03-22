@@ -12,5 +12,9 @@ securityContext:
 step 3, kubectl delete po ubuntu-sleeper --force
 kubectl apply -f ubuntu-sleeper.yaml
 
-
-
+3. Update the pod ubuntu-sleeper to run as Root user and with the SYS_TIME capability.
+A:
+in the edit pod step, just replace the previously set runAsUser: 1010 with 
+securityContext:        # Updated securityContext on container level
+      capabilities:
+        add: ["SYS_TIME"]
