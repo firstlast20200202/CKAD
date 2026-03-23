@@ -13,3 +13,6 @@ t omake sure that pod goes to a certain node, we need to apply affinity.
 it's all happening on work nodes, for master node, it auto-apply taint already:
 $ k describe node kubemaster | grep Taint
 Taint:     node-role.kubenetes.io/master: NoSchedule
+
+untaint a node:
+kubectl taint nodes controlplane node-role.kubernetes.io/control-plane:NoSchedule-
