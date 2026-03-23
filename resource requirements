@@ -1,0 +1,5 @@
+as default there's no requests and limits of CPU and memory of each pod
+
+so we can set max and min request and limit for each pod
+
+or we can set resource quotas at a namespace level for a bunch of nodes
