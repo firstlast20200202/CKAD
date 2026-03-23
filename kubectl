@@ -47,3 +47,14 @@ note: the --dry-run=client flag in Kubernetes kubectl commands simulates the exe
 the Kubernetes API server or making any changes to the cluster.
 
 
+some other useful commands:
+k get pods --watch    //displaying statuschanges of pods
+
+k get pods -o wide    //show the nodes that pods are running on
+
+
+
+
+
+
+
