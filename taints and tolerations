@@ -2,4 +2,6 @@ taints are set on nodes, tolerance is set on pods
 
 k taint nodes node-name key=value:taint-effect
 there are 3 types of taint-effect: NoSchedule, PreferNoSchedule, NoExecute(if a taint has been applied to a node, the existing pods will be evicted)
+eg. k taint nodes node1 app=myapp:NoSchedule
+
 
