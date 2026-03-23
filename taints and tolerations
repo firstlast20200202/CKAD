@@ -16,3 +16,23 @@ Taint:     node-role.kubenetes.io/master: NoSchedule
 
 untaint a node:
 kubectl taint nodes controlplane node-role.kubernetes.io/control-plane:NoSchedule-
+
+how do taint on node match tolerance on pod:
+Taints on nodes and tolerances on pods match when the pod's key, operator, and effect align with the node's taint, allowing the scheduler to place pods on 
+restricted nodes. A match occurs if the key and effect are identical, with the operator set to Equal (default) requiring matching values, or Exists requiring 
+no value.
+
+Key Matching Principles:
+Exact Match (Equal): If a node is tainted with key=value:Effect, the pod must have a toleration with the same key, value, and effect.
+Presence Match (Exists): If a node is tainted with key=value:Effect, a pod with a toleration of just key:Effect and operator: Exists will match, regardless of the value.
+Effect Matching: The effect (NoSchedule, PreferNoSchedule, NoExecute) must match for the toleration to apply.
+Wildcard: A toleration with an empty key and the Exists operator matches all taints. 
+
+Example
+Node Taint: dedicated=gpu:NoSchedule
+Matching Pod Toleration:
+tolerations:
+- key: "dedicated"
+  operator: "Equal"
+  value: "gpu"
+  effect: "NoSchedule"
