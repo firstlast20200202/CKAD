@@ -4,3 +4,7 @@ spec.nodeSelector.size
 set for a node, run
 $ k label nodes <node-name> <label-key>=<label-value>
 eg. k label nodes node01 size=Large
+
+do above before creating the pod:
+$ k create -f pod-definition.yaml
+
