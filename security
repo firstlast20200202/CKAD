@@ -1,5 +1,7 @@
 to avoid the root user of the host to be the root user of the contaner which is running on the host, we can specify the user in dockerfile while building an image
 or to grant different permission to the root user of the container by editing the file here: /usr/include/linux/capability.h
+by default, run 'docker run ubuntu' to check what are the default permissions on the container, if you want to update it, run 
+'docker run --cap-add MAC_ADMIN ubuntu' sth like that.
 
 
 1. What is the user to execute the sleep process within the ubuntu-sleeper pod
