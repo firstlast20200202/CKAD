@@ -1,0 +1,5 @@
+set for a pod, in pod definition file:
+spec.nodeSelector.size
+
+set for a node, run
+$ k label nodes <node-name> <label-key>=<label-value>
