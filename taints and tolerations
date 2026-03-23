@@ -8,3 +8,4 @@ tolerations are defined in metadata.spec.tolerations in pod-definition.yaml file
 
 taints and tolerations setting is only working for nodes selecting which pods are allowed to go on that node, but the pod which has a certain tolerance doesnt always
 go the that node that has the same taint, it can go to another node which doesnt have any taint apllied.
+t omake sure that pod goes to a certain node, we need to apply affinity.
