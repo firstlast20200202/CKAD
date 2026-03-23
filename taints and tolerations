@@ -1,7 +1,10 @@
 taints are set on nodes, tolerance is set on pods
 
 k taint nodes node-name key=value:taint-effect
-there are 3 types of taint-effect: NoSchedule, PreferNoSchedule, NoExecute(if a taint has been applied to a node, the existing pods will be evicted)
+there are 3 types of taint-effect: NoSchedule, PreferNoSchedule, NoExecute(if a taint has been applied to a node, the existing pods will be killed)
 eg. k taint nodes node1 app=myapp:NoSchedule
 
 tolerations are defined in metadata.spec.tolerations in pod-definition.yaml file
+
+taints and tolerations setting is only working for nodes selecting which pods are allowed to go on that node, but the pod which has a certain tolerance doesnt always
+go the that node that has the same taint, it can go to another node which doesnt have any taint apllied.
