@@ -14,4 +14,7 @@ RollingUpdate    //default
 
 rollback a deployment:
 $ k rollout undo deployment myapp-deployment
+verify:
+$ k get replicasets
+
 
