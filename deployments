@@ -26,3 +26,8 @@ steps of performing deployments:
 create
 rollout
 verify: rollout history
+
+
+there are more deployment strategy:
+blue/green
+canary
