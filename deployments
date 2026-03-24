@@ -31,3 +31,4 @@ verify: rollout history
 there are more deployment strategy:
 blue/green
 canary: roll out a new version of a small trafic and test, if test passes, roll out new version to all the replicasets.
+it's implemented by setting selector in service-definition file, as well as same label types in myapp-primary.yaml and myapp-canary.yaml
