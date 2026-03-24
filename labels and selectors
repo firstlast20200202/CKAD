@@ -8,3 +8,4 @@ in replicaset definition file, the labels under metadata is for the replicaset, 
 selector under spec is for matching the labels, in replicaset definition file and service definition file.
 
 
+kubectl get all --selector env=prod --no-headers | wc -l    ????????????????????
