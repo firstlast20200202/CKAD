@@ -4,7 +4,7 @@ to view the selector:
 $ k get pods --selector <key>=<value>
 
 
-
+in replicaset definition file, the labels under metadata is for the replicaset, the labels under spec.template.metadata is for the pod.
 
 
 
