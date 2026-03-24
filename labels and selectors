@@ -1,4 +1,4 @@
-labels and selectors are used for grouping different things like pods, deployments, services etc.
+labels and selectors are used for grouping different objects together like pods, deployments, services etc.
 labels are added under metadata in pod-definition file
 to view the selector: 
 $ k get pods --selector <key>=<value>
