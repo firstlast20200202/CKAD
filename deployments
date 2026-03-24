@@ -1,3 +1,4 @@
+when roll out a deployment, it creates replicasets 
 to deploy to a new version:
 option 1:
 in deployment-definition file, update the version number at spec.template.spec.containers.image
@@ -21,3 +22,7 @@ verify:
 $ k get replicasets
 
 
+steps of performing deployments:
+create
+rollout
+verify: rollout history
