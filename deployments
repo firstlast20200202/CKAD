@@ -11,6 +11,7 @@ two different StrategyTyle:
 Recreate
 RollingUpdate    //default
 
+$ k rollout status deployment/myapp-deployment
 
 rollback a deployment:
 $ k rollout undo deployment myapp-deployment
