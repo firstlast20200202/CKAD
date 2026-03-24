@@ -4,7 +4,7 @@ in deployment-definition file, update the version number at spec.template.spec.c
 $ k apply -f deployment.definition.yml
 
 option 2:
-$ k set image deployment/myapp=deployment \nginx=nginx:1.9.1
+$ k set image deployment/myapp=deployment nginx=nginx:1.9.1
 
 
 two different StrategyTyle:
