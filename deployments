@@ -30,4 +30,4 @@ verify: rollout history
 
 there are more deployment strategy:
 blue/green
-canary
+canary: roll out a new version of a small trafic and test, if test passes, roll out new version to all the replicasets.
