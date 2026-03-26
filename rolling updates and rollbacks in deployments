@@ -43,7 +43,7 @@ kubectl set image deploy frontend simple-webapp=kodekloud/webapp-color:v2
 Pod Template:
   Labels:  name=webapp
   Containers:
-   simple-webapp:
+   simple-webapp:    //container name
     Image:         kodekloud/webapp-color:v1
 
 option 2:
