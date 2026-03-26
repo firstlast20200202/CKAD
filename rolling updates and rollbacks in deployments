@@ -9,7 +9,7 @@ $ k set image deployment/myapp=deployment nginx=nginx:1.9.1
 
 
 two different StrategyTyle:
-Recreate
+Recreate    //shut down all the environments which have the old version, and deploy the new version to all the environments, it would have a short outrage
 RollingUpdate    //default
 Blue/green    //deploy to both environments, starting with a low traffic to the new site, and as time goes, putting more and more traffic to the new environment until the old environment shuts
 Canary    //deploy to one environment with the new version, after testing, deploy to the rest environments; important in production
