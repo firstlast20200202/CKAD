@@ -13,12 +13,10 @@ Recreate    //shut down all the environments which have the old version, and dep
 RollingUpdate    //default
 
 there are more deployment strategy:
-Blue/green
+Blue/green: 100% tranffic is still rolled to the old version, at this point of time test is run on new version, once test passes, switch all the traffic to the new version at once
 Canary: roll out a new version of a small trafic and test, if test passes, roll out new version to all the replicasets; important in production
 it's implemented by setting selector in service-definition file, as well as same label types in myapp-primary.yaml and myapp-canary.yaml
 
-
-Blue/green    //deploy to both environments, starting with a low traffic to the new site, and as time goes, putting more and more traffic to the new environment until the old environment shuts
 
 status:
 $ k rollout status deployment/myapp-deployment
