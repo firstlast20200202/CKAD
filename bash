@@ -1,4 +1,4 @@
-bash /root/curl-test.sh
+bash /root/curl-test.sh      //run more tests on the application
 
 vi /root/curl-test.sh
 
