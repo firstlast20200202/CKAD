@@ -11,8 +11,14 @@ $ k set image deployment/myapp=deployment nginx=nginx:1.9.1
 two different StrategyTyle:
 Recreate    //shut down all the environments which have the old version, and deploy the new version to all the environments, it would have a short outrage
 RollingUpdate    //default
+
+there are more deployment strategy:
+Blue/green
+Canary: roll out a new version of a small trafic and test, if test passes, roll out new version to all the replicasets; important in production
+it's implemented by setting selector in service-definition file, as well as same label types in myapp-primary.yaml and myapp-canary.yaml
+
+
 Blue/green    //deploy to both environments, starting with a low traffic to the new site, and as time goes, putting more and more traffic to the new environment until the old environment shuts
-Canary    //deploy to one environment with the new version, after testing, deploy to the rest environments; important in production
 
 status:
 $ k rollout status deployment/myapp-deployment
@@ -28,12 +34,6 @@ steps of performing deployments:
 create
 rollout
 verify: rollout history
-
-
-there are more deployment strategy:
-blue/green
-canary: roll out a new version of a small trafic and test, if test passes, roll out new version to all the replicasets.
-it's implemented by setting selector in service-definition file, as well as same label types in myapp-primary.yaml and myapp-canary.yaml
 
 
 update an image in a deployment:
