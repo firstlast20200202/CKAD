@@ -34,3 +34,18 @@ there are more deployment strategy:
 blue/green
 canary: roll out a new version of a small trafic and test, if test passes, roll out new version to all the replicasets.
 it's implemented by setting selector in service-definition file, as well as same label types in myapp-primary.yaml and myapp-canary.yaml
+
+
+update an image in a deployment:
+option 1:
+kubectl set image deploy frontend simple-webapp=kodekloud/webapp-color:v2  
+//this route might be found in this way: run k describe deployment, get the information as below, then udpate the image to kodekloud/webapp-color:v2 
+Pod Template:
+  Labels:  name=webapp
+  Containers:
+   simple-webapp:
+    Image:         kodekloud/webapp-color:v1
+
+option 2:
+kubectl edit deployment frontend
+
