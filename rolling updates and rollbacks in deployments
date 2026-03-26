@@ -47,5 +47,5 @@ Pod Template:
     Image:         kodekloud/webapp-color:v1
 
 option 2:
-kubectl edit deployment frontend
+kubectl edit deployment frontend    //no need other commands following it
 
