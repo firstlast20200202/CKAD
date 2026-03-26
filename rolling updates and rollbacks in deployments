@@ -18,8 +18,8 @@ implementation:
 we create a service to route traffic to the old version by setting a label on the pods, we use the same label as a selector on the service; on the new deployment pod, once test passes,
 we route all the traffic from the service to the new pod by switching the label selector on the service, just specify the selector in the service to the new pod. 
 
-Canary: roll out a new version of a small trafic and test, if test passes, roll out new version to all the replicasets; important in production
-it's implemented by setting selector in service-definition file, as well as same label types in myapp-primary.yaml and myapp-canary.yaml
+Canary: create a canary pod, roll out a new version with a small trafic and test on the new pod, if test passes, roll out new version to all the existing replicasets, then kill the canary pod; 
+important in production; it's implemented by setting selector in service-definition file, as well as same label types in myapp-primary.yaml and myapp-canary.yaml
 
 
 status:
