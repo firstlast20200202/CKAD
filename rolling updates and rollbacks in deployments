@@ -14,6 +14,10 @@ RollingUpdate    //default
 
 there are more deployment strategy:
 Blue/green: 100% tranffic is still rolled to the old version, at this point of time test is run on new version, once test passes, switch all the traffic to the new version at once
+implementation: 
+we create a service to route traffic to the old version by setting a label on the pods, we use the same label as a selector on the service; on the new deployment pod, once test passes,
+we route all the traffic from the service to the new pod by switching the label selector on the service, just specify the selector in the service to the new pod. 
+
 Canary: roll out a new version of a small trafic and test, if test passes, roll out new version to all the replicasets; important in production
 it's implemented by setting selector in service-definition file, as well as same label types in myapp-primary.yaml and myapp-canary.yaml
 
