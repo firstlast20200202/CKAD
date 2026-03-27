@@ -1,0 +1,3 @@
+to see output of a pod:
+$ k logs <pod-name>
+
