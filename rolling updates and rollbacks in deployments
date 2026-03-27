@@ -54,3 +54,15 @@ Pod Template:
 option 2:
 kubectl edit deployment frontend    //no need other commands following it
 
+
+update deployment:
+k scale deployment --replicas=1 <deployment-name>     //originally replicas is 2
+
+
+
+
+
+
+
+
+
