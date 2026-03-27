@@ -2,7 +2,8 @@ to see output of a pod:
 $ k logs <pod-name>
 
 in job-definition.yaml:
-the value of spec.completions is specifying how many jobs will be created, it wil lbe done one by one which means that the 2nd pod should be created when 1st is completed.
+the value of spec.completions is specifying how many pods will be created successfully, it will be done one by one which means that the 2nd pod should be created 
+when 1st is completed, also if the 1st is failed, it will create 2nd one, and keep doing in this way until 3 of them successfully complete if we specify it 3.
 
 
 
