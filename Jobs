@@ -2,6 +2,10 @@ to see output of a pod:
 $ k logs <pod-name>
 
 in job-definition.yaml:
+move spec section in pod-definiton.yaml to under spec.template section in job-definition.yaml, notice that default value of spec.restartPolicy in pod-definition.yaml
+is Always, Never is another available value.
+
+
 the value of spec.completions is specifying how many pods will be created successfully, it will be done one by one which means that the 2nd pod should be created 
 when 1st is completed, also if the 1st is failed, it will create 2nd one, and keep doing in this way until 3 of them successfully complete if we specify it 3.
 
