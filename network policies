@@ -1,1 +1,1 @@
-
+specify podSelector, policyTypes and ingress in the NetworkPolicy file , specify namespace under ingress section.
