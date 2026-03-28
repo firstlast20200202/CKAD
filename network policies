@@ -1,1 +1,2 @@
 specify podSelector, policyTypes and ingress in the NetworkPolicy file , specify namespace under ingress section.
+if a server is external of the cluster, we use it Block to allow OT reject the connection
