@@ -11,6 +11,6 @@ when 1st is completed, also if the 1st is failed, it will create 2nd one, and ke
 
 spec.parallelism is creating pod at the same time, if any failed it will keep creating until 3 of them complete if it's specified as 3.
 
-Cronjob: a job shceduled periodically
+Cronjob: a job scheduled periodically
 copy the spec section from job-definition.yaml to spec.jobTemplate section in cron-job-defnition.yaml
 
