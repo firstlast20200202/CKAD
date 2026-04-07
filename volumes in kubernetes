@@ -1,1 +1,2 @@
 attach a volume to the pod, the data generated or proceeded in the pod will be stored in the volume. even the pod gets deleted afterwards, the volume retains.
+kubernetes supports several data storage solutions like Amazon EBS, si in this case in the spec.volumes section of the config file, we just need to replace the related fields.
