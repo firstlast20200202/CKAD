@@ -2,3 +2,7 @@ difference to service
 proxy
 ssl
 migrate to gateway API
+
+k get pods -A
+k get deploy -n <namespace>
+k get svc -n <namespace>
