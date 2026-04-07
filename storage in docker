@@ -1,5 +1,3 @@
-when a container is destroyed, we maybe need to store the data, 
-
-Data persistence is the process of storing data on non-volatile storage (like hard drives, SSDs, or databases) so it survives system reboots, power outages, 
-or application termination.
+When a container is destroyed, we probably want to store the data, data persistence is the process of storing data on non-volatile storage (like hard drives, SSDs, 
+or databases) so it survives system reboots, power outages, or application termination.
 To keep the data in the container, we can add a persistent volume to the container.
