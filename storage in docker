@@ -9,3 +9,8 @@ volumes
 When a container is destroyed, we probably want to store the data, data persistence is the process of storing data on non-volatile storage (like hard drives, SSDs, 
 or databases) so it survives system reboots, power outages, or application termination.
 To keep the data in the container, we can add a persistent volume to the container.
+
+
+difference of storage driver and volumes in docker:
+storage drivers manage how image and container layers are built on the host's filesystem, while volumes are dedicated mechanisms for persisting 
+and sharing data outside of those layers.
