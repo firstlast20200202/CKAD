@@ -9,6 +9,8 @@ volumes
 When a container is destroyed, we probably want to store the data, data persistence is the process of storing data on non-volatile storage (like hard drives, SSDs, 
 or databases) so it survives system reboots, power outages, or application termination.
 To keep the data in the container, we can add a persistent volume to the container.
+$ docker volume create data_volume  //it creates a folder data_volume under /var/lib/docker
+$ docker run -v data_volume:/var/lib/mysql <image-name>  //it creates a new container and mounts the volume inside the docker containers
 
 
 difference of storage driver and volumes in docker:
