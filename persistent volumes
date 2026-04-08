@@ -1,1 +1,3 @@
+persistent volume is compared to file system, pv is for keeping data when pods are deleted.
 
+hostpath as the pv type is not recommended, whereas cluster storage solutions are recommended such as AWS EBS.
