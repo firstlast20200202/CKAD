@@ -1,3 +1,6 @@
-specify podSelector, policyTypes and ingress in the NetworkPolicy file , specify namespace under ingress section.
-if a server is external of the cluster, we use it Block to allow OT reject the connection
-as soon as you apply policies to a pod, it's kinda blocks other pods ingress or exgress, that's why we need to manually allows it
+any pod should be able to communicate with any other pod in the same collector, to protect some pods communicating with some other pods, we use network policies.
+after setting ingress rules, we dont need to set egress rules as it is the response to the incoming pod.
+
+specify podSelector, policyTypes and ingress under spec section in the NetworkPolicy file, specify namespace under ingress section.
+if a server is external of the cluster, we use ipBlock to allow the connection from a pod outside of the current collector.
+as soon as you apply policies to a pod, it kinda blocks other pods ingress or exgress, that's why we need to manually allows it.
