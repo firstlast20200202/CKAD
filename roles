@@ -1,0 +1,14 @@
+1. Create the necessary roles and role bindings required for the dev-user to create, list and delete pods in the default namespace.
+Use the given spec:
+Role: developer
+Role Resources: pods
+Role Actions: list
+Role Actions: create
+Role Actions: delete
+RoleBinding: dev-user-binding
+RoleBinding: Bound to dev-user
+
+A:
+kubectl create role developer --namespace=default --verb=list,create,delete --resource=pods    //create a role
+
+kubectl create rolebinding dev-user-binding --namespace=default --role=developer --user=dev-user    //create a rolebinding
