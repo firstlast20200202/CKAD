@@ -1,0 +1,23 @@
+ssh ckad00043
+
+k get all -n <namespace-name>
+
+k -n cute-panda logs scraper-XXXX-XXXX
+
+k -n cute-panda get role
+
+k -n cute-panda describe role event-reader
+k -n cute-panda describe role pod-list    //list pod
+k -n cute-panda describe role pod-logs
+
+k -n cute-panda create sa scraper    //credate service account
+
+k -n cute-panda create rolebinding scraper-rolebinding --serviceaccount=cute-panda:scraper --role=pod-list    //create a role binding
+
+k -n cute-panda set serviceaccount deployment scraper scraper
+
+k -n cute-panda logs scraper-XXXX-XXXX
+
+exit
+
+
