@@ -14,13 +14,3 @@ spec.parallelism is creating pod at the same time, if any failed it will keep cr
 Cronjob: a job scheduled periodically
 copy the spec section from job-definition.yaml to spec.jobTemplate section in cron-job-defnition.yaml
 
-
-practical question: 
-ssh ckad00021
-vi cronjob-1.yaml
-
-k apply -f cronjob-1.yaml
-k get cronjob
-k create job ppi-test --from=cronjob/ppi
-k get jobs
-exit
