@@ -1,1 +1,14 @@
+k explain deployment.spec
 
+k explain deployment.spec.selector
+
+vi /ckad/credible-mite/www.yaml
+
+update version, namespace name, add selector.matchLabels
+the value under deployment.spec.selector.matchLabels should be the same as the one under deployment.spec.template.metadata.labels
+
+k apply -f /ckad/credible-mite/www.yaml 
+
+//verify
+k -n garfish get deployment
+k -n garfish get pod
