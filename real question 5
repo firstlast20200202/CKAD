@@ -1,3 +1,5 @@
+Q: update an application which was developed in an old version of kubernetes
+
 k explain deployment.spec
 
 k explain deployment.spec.selector
