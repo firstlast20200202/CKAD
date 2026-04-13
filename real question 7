@@ -1,3 +1,4 @@
 k -n prod27 edit deployment probe-http
 
-k -n prod27 get pod
+k -n prod27 get pod    //verify the new pod is running
+
