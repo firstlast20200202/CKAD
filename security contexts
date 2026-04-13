@@ -1,1 +1,7 @@
+1. What is the user used to execute the sleep process within the ubuntu-sleeper pod?
+A:
+$ kubectl exec ubuntu-sleeper -- whoami
+
+
+
 
