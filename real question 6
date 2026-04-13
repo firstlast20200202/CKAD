@@ -14,7 +14,7 @@ k -n pod-resources edit resourcequotas pod-resources-quota    //pod-resources-qu
 
 //edit under spec.hard, not status
 
-k -n pod-resources rollout restart deployment nginx-resources    //不rollout也没关系 应该是会自动rollout
+k -n pod-resources rollout restart deployment nginx-resources    //不rollout也没关系 应该是会自动rollout check the resource in the pod, if it's updated that means it's auto rolloedut
 
 k -n pod-resources get pod
 
