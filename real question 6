@@ -8,9 +8,9 @@ Esc :wq
 //update namespace quota
 k get resourcequota -A
 
-k describe ns pod-resources    //it shows namespace limits of CPU and memory
+k describe ns pod-resources    //it shows namespace limits of CPU and memory as well as resource quota name
 
-k -n pod-resources edit resourcequotas pod-resources-quota
+k -n pod-resources edit resourcequotas pod-resources-quota    //pod-resources-quota is recourse quota name
 
 //edit under spec.hard
 
