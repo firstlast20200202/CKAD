@@ -1,0 +1,3 @@
+k -n prod27 edit deployment probe-http
+
+k -n prod27 get pod
