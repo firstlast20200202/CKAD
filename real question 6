@@ -12,7 +12,7 @@ k describe ns pod-resources    //it shows namespace limits of CPU and memory as 
 
 k -n pod-resources edit resourcequotas pod-resources-quota    //pod-resources-quota is recourse quota name
 
-//edit under spec.hard
+//edit under spec.hard, dont touch status
 
 k -n pod-resources rollout restart deployment nginx-resources
 
