@@ -1,0 +1,8 @@
+ssh ckad00021
+vi cronjob-1.yaml
+
+k apply -f cronjob-1.yaml
+k get cronjob
+k create job ppi-test --from=cronjob/ppi
+k get jobs
+exit
