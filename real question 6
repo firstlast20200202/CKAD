@@ -1,4 +1,21 @@
-kubectl describe ns pod-resources
+k -n pod-resources edit deployments nginx-resources
 
-kubectl get resourcequota -A
+//edit requests and limits in the file
+
+Esc :wq
+
+
+//update namespace quota
+k get resourcequota -A
+
+k describe ns pod-resources    //it shows namespace limits of CPU and memory
+
+k -n pod-resources edit resourcequotas pod-resources-quota
+
+//edit under spec.hard
+
+k -n pod-resources rollout restart deployment nginx-resources
+
+k -n pod-resources get pod
+
 
