@@ -1,0 +1,4 @@
+kubectl describe ns pod-resources
+
+kubectl get resourcequota -A
+
