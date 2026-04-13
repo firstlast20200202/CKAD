@@ -2,6 +2,9 @@
 A:
 $ kubectl exec ubuntu-sleeper -- whoami
 
-
+//k exec is to to execute commands directly inside a running container within a Kubernetes pod
+//The general structure of the command is:
+//kubectl exec (POD_NAME) [-c CONTAINER_NAME] [FLAGS] -- COMMAND [ARGUMENTS]
+// --: A mandatory separator used to distinguish kubectl flags from the command being run inside the container. 
 
 
