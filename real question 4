@@ -4,7 +4,7 @@ k -n quetzal get pod broker-deployment-554c49db77-pk27k -o yaml > oo.yaml
 
 vi oo.yaml
 
-add this part under container:
+//add this part under container:
 SecurityContext: 
   runAsUser: 30000
   allowPrivilegeEscalation: false
