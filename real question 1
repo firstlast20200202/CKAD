@@ -15,7 +15,7 @@ k -n cute-panda create sa scraper    //credate service account
 
 k -n cute-panda create rolebinding scraper-rolebinding --serviceaccount=cute-panda:scraper --role=pod-list    //create a role binding
 
-k -n cute-panda set serviceaccount deployment scraper scraper
+k -n cute-panda set serviceaccount deployment scraper scraper    //first scraper is deployment, second is sa, so the order is differernt from sa deployment
 
 //verify
 k -n cute-panda logs scraper-XXXX-XXXX
