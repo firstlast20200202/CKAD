@@ -19,3 +19,9 @@ spec:
 under service:
 name: nginx-ing-svc     //service name
 
+
+k apply -f /ckad/CKAD202206/service.yaml 
+k apply -f /ckad/CKAD202206/ingress.yaml 
+
+//verify
+curl -L http://ckad-ingress-test.local
