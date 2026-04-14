@@ -1,1 +1,9 @@
+k -n rapid-goat get all
 
+k -n rapid-goat edit deployment busybox
+
+# paused: true
+edit container name and image name
+
+//verify
+k -n rapid-goat get pod
