@@ -17,6 +17,7 @@ k -n cute-panda create rolebinding scraper-rolebinding --serviceaccount=cute-pan
 
 k -n cute-panda set serviceaccount deployment scraper scraper
 
+//verify
 k -n cute-panda logs scraper-XXXX-XXXX
 
 exit
