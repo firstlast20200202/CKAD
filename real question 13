@@ -1,1 +1,21 @@
+perminantly change to another namespace:
+kubectl config set-context --current --namespace=ingress-ckad
+
+ls /ckad/CKAD202206
+vi /ckad/CKAD202206/service.yaml
+deployment.spec.template.metadata.labels = service.spec.selector
+
+deployment.spec.template.spec.containers.ports.containerPort = service.spec.ports.targetPort
+
+
+vi /ckad/CKAD202206/ingress.yaml
+spec:
+ ingressClassName: traefik
+ rules:
+ - http:
+   paths:
+   - path: / 
+
+under service:
+name: nginx-ing-svc     //service name
 
