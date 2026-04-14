@@ -1,0 +1,5 @@
+kubectl -n relaxed-shark get deployment postgres -o yaml
+
+//create secret
+k -n relaxed-shark create secret generic postgres --from-literal=username=tux --from-literal=database=kubestronauts --from-literal=password=Kubernetes123
+
