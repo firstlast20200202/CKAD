@@ -1,1 +1,14 @@
+//find out which policy is the one that's needed
+k -n ckad00018 get pod --show-labels    
+//pod db has label app=db, pod front has label app=front, there's another pod called XXXXnew, what we do in this question is put those two labels into this new pod
+
+k -n ckad00018 get networkpolicy
+
+k -n ckad00018 describe networkpolicy access-front
+
+k -n ckad00018 describe networkpolicy access-db
+
+//apply the labels
+k -n ckad00018 label pod ckad00018-newpod front-access=true
+k -n ckad00018 label pod ckad00018-newpod db-access=true
 
