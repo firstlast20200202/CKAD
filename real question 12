@@ -1,5 +1,11 @@
-kubectl -n relaxed-shark get deployment postgres -o yaml
+kubectl -n relaxed-shark get deployment postgres -o yaml    //find environment variables
 
-//create secret
+//create secret based on environment variables
 k -n relaxed-shark create secret generic postgres --from-literal=username=tux --from-literal=database=kubestronauts --from-literal=password=Kubernetes123
+//there are 3 environment variables, each name is in capital letters, and in this step we create environment variables: username, database and password, then 
+//assign values to them, in future we only need to user these 3 environment variables in deployment
 
+k -n relaxed-shark edit deployment postgres
+
+//verify
+k -n relaxed-shark e get pod
