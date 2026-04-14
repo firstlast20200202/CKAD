@@ -1,0 +1,17 @@
+k -n gorilla get all
+
+k -n gorilla logs honeybee-deployment-6df69f69f9-65zc6    //find out 'cant list resource' 
+
+//get sa, roles, rolebinding
+k -n gorilla get roles
+k -n gorilla describe boxweb-role    //get that gorilla-role has list permission
+
+k -n gorilla get sa
+
+k -n gorilla get rolebinding
+
+k -n gorilla describe rolebinding    //get rolebinding of sa and roles
+
+k -n gorilla set sa deployment honeybee-deployment gorilla-sa    //??????????????????? order
+
+k -n gorilla logs honeybee-deployment-c5f687f48-lrfjh    //check the pod log, not the deployment log
