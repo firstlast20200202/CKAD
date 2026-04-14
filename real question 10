@@ -10,8 +10,8 @@ k -n gorilla get sa
 
 k -n gorilla get rolebinding
 
-k -n gorilla describe rolebinding    //get rolebinding of sa and roles
+k -n gorilla describe rolebinding    //check which sa is binding to which role
 
-k -n gorilla set sa deployment honeybee-deployment gorilla-sa    //??????????????????? order
+k -n gorilla set sa deployment honeybee-deployment gorilla-sa    //it's like set sa to 'deployment honeybee-deployment' (as a whole), sa name is gorilla-sa
 
 k -n gorilla logs honeybee-deployment-c5f687f48-lrfjh    //check the pod log, not the deployment log
