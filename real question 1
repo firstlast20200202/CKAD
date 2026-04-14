@@ -10,6 +10,7 @@ k -n cute-panda describe role event-reader
 k -n cute-panda describe role pod-list    //list pod
 k -n cute-panda describe role pod-logs
 
+//create sa, bind sa to role, set sa to deployment
 k -n cute-panda create sa scraper    //credate service account
 
 k -n cute-panda create rolebinding scraper-rolebinding --serviceaccount=cute-panda:scraper --role=pod-list    //create a role binding
