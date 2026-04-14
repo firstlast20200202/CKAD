@@ -1,1 +1,27 @@
+k -n external get ingressclasses
 
+k -n external get svc
+
+vi ingress.yaml    //create yaml file of ingress
+
+metadata:
+  name: web-app-ingress
+  namespace: external
+spec:
+  ingressClassName: traefik
+  rules:
+  - host: "external.sterling-bengal.local"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: web-app
+            port:
+              number: 8080
+
+k apply -f ingress.yaml -n external
+
+//verify
+curl -L external.sterling-bengal.local
