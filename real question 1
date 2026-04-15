@@ -19,7 +19,7 @@ k -n cute-panda create rolebinding scraper-rolebinding --serviceaccount=cute-pan
 k -n cute-panda set serviceaccount deployment scraper scraper    //first scraper is deployment, second is sa, so the order is differernt from sa deployment
 
 //verify
-k -n cute-panda logs scraper-XXXX-XXXX
+k -n cute-panda logs scraper-XXXX-XXXX    //new pod name
 
 exit
 
