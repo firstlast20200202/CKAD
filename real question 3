@@ -1,0 +1,10 @@
+kubectl -n ckad00017 edit deployments.apps ckad00017-deployment
+
+add tier: dmz under spec.template.metadata.labels
+
+//verify
+k -n ckad00017 get pod --show-labels
+
+**********************************************
+havent finished yet
+
