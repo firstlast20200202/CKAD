@@ -12,7 +12,7 @@
 tomorrow repeat: 
 
 
-2, 3, 4, 6, 9
+2, 3, 4, 9
 
 ask 3
 
