@@ -4,5 +4,9 @@ vi cronjob-1.yaml
 k apply -f cronjob-1.yaml
 k get cronjob
 k create job ppi-test --from=cronjob/ppi
-k get jobs
+k get jobs                                            //?????????????????????/should it be 1/1 under READY
+candidate@master01:~$ k get pod
+NAME                 READY   STATUS      RESTARTS   AGE
+ppi-29603670-wn5cx   0/1     Completed   0          61s
+ppi-test-xxwf9       0/1     Completed   0          22s
 exit
