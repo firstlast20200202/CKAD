@@ -1,4 +1,4 @@
-k -n external get ingressclasses    //get the name traefik       //missed this morning !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+k -n external get ingressclasses    //get the name traefik       //missed this morning, also remember spelling is different !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 k -n external get svc    //get name web-app and port 8080
 
