@@ -1,0 +1,11 @@
+cd /ckad/DF
+
+sudo docker build -t centos:8.2 .
+
+//verify
+sudo docker images | grep centos | grep 8.2
+
+sudo docker save centos:8.2 > /ckad/DF/centos-8.2.tar
+
+//verify 
+ll /ckad/DF/centos-8.2.tar
