@@ -1,0 +1,10 @@
+k -n ckad00015 get all
+
+k -n ckad00015 edit deployment webapp
+
+k -n ckad00015 describe deployment webapp    //verify the image version is 1.13.7
+
+k -n ckad00015 rollout undo deployment webapp
+
+k -n ckad00015 describe deployment webapp    //verify the image version is 1.12.2
+
