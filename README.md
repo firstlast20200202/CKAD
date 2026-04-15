@@ -14,6 +14,8 @@ tomorrow repeat:
 
 2, 3, 4, 6, 9
 
+ask 3
+
 from
 11 10
 
