@@ -1,6 +1,6 @@
 k -n external get ingressclasses
 
-k -n external get svc
+k -n external get svc    //get name web-app and port 8080
 
 vi ingress.yaml    //create yaml file of ingress
 
