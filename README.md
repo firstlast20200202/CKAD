@@ -20,7 +20,5 @@ ask 4: why the file location different can get different result
 
 ask 10: difference from edit in file or edit deployment 
 
-from
-11 10
 
 
