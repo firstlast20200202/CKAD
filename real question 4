@@ -12,3 +12,7 @@ SecurityContext:
     Add: ["NET_BIND_SERVICE"]
 
 k replace --force -f oo.yaml
+
+
+note：
+securityContexts可以添加在两处：deployment的pod级别和deployment的container里 添加在pod级别的话就是作用于所有的containers 答题一定要看准让添加在哪里 这里是添加在单一容器里
