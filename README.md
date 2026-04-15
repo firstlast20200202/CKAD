@@ -14,7 +14,7 @@ tomorrow morning: 86-89
 today repeat: 
 
 a little:
-1, 4, 5, 6, 7
+1, 4, 5, 6, 7, 8
 
 a lot:
 2    
