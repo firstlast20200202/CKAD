@@ -7,7 +7,7 @@ k explain deployment.spec.selector
 vi /ckad/credible-mite/www.yaml
 
 update version, namespace name, add selector.matchLabels
-the value under deployment.spec.selector.matchLabels should be the same as the one under deployment.spec.template.metadata.labels
+the value under deployment.spec.selector.matchLabels should be the same as the one under deployment.spec.template.metadata.labels, here selector and template are parallel
 
 k apply -f /ckad/credible-mite/www.yaml 
 
