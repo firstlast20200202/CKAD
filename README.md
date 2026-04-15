@@ -16,6 +16,8 @@ tomorrow repeat:
 
 ask 3
 
+ask 4: why the file location different can get different result
+
 from
 11 10
 
