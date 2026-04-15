@@ -9,10 +9,10 @@
 
 
 
-tomorrow repeat: 
+repeat: 
 
 
-2, 3, 4, 9
+2, 3, 4, 9, 10, 11, 12
 
 ask 3
 
