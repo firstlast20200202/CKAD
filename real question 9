@@ -13,7 +13,7 @@ spec:
   - host: "external.sterling-bengal.local"        //add
     http:
       paths:
-      - path: /
+      - path: /                //edit
         pathType: Prefix
         backend:
           service:
