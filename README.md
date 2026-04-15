@@ -13,6 +13,7 @@ tomorrow morning: 86-89
 
 today repeat: 
 
-1, 4     //bit
-
-2     //lot
+a little:
+1, 4
+a lot:
+2    
