@@ -12,5 +12,7 @@ tomorrow morning: 86-89
 
 
 today repeat: 
+
 1     //bit
+
 2     //lot
