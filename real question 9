@@ -8,18 +8,18 @@ metadata:
   name: web-app-ingress
   namespace: external            //add
 spec:
-  ingressClassName: traefik
+  ingressClassName: traefik      //edit
   rules:
-  - host: "external.sterling-bengal.local"
+  - host: "external.sterling-bengal.local"        //add
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: web-app
+            name: web-app      //edit
             port:
-              number: 8080
+              number: 8080      //edit
 
 k apply -f ingress.yaml -n external
 
