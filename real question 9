@@ -1,4 +1,4 @@
-k -n external get ingressclasses
+k -n external get ingressclasses    //get the name traefik
 
 k -n external get svc    //get name web-app and port 8080
 
@@ -6,7 +6,7 @@ vi ingress.yaml    //create yaml file of ingress
 
 metadata:
   name: web-app-ingress
-  namespace: external
+  namespace: external            //add
 spec:
   ingressClassName: traefik
   rules:
