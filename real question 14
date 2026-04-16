@@ -4,7 +4,7 @@ k -n ckad00018 get pod --show-labels
 
 k -n ckad00018 get networkpolicy
 
-k -n ckad00018 describe networkpolicy access-front
+k -n ckad00018 describe networkpolicy access-front    //get the values of PodSelector
 
 k -n ckad00018 describe networkpolicy access-db
 
