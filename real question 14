@@ -4,12 +4,12 @@ k -n ckad00018 get pod --show-labels
 
 k -n ckad00018 get networkpolicy
 
-k -n ckad00018 describe networkpolicy access-front    //get the values of PodSelector
+k -n ckad00018 describe networkpolicy access-front    //get PodSelector value: front-access=true
 
 k -n ckad00018 describe networkpolicy access-db
 
 //apply the labels
-k -n ckad00018 label pod ckad00018-newpod front-access=true
+k -n ckad00018 label pod ckad00018-newpod front-access=true    //apply the PodSelector Values to the new pod
 k -n ckad00018 label pod ckad00018-newpod db-access=true      
 //what if accidently added wrong labels 
 k -n ckad00018 label pod ckad00018-newpod sb-access-
