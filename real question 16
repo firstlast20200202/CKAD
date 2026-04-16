@@ -2,7 +2,7 @@ k -n rapid-goat get all
 
 k -n rapid-goat edit deployment busybox
 
-# paused: true
+# paused: true                        //easy to miss
 edit container name and image name
 
 //verify
