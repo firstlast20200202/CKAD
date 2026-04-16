@@ -1,1 +1,15 @@
+vi /ckad/goshawk/current-chipmunk-deployment.yaml
 
+update replicas = 6
+
+//copy contents in current-chipmunk-deployment.yaml to the file below
+vi /ckad/goshawk/canary-chipmunk-deployment.yaml
+
+//update some labels and replicaset to 4
+
+k -n goshawk apply -f /ckad/goshawk/canary-chipmunk-deployment.yaml
+
+k -n goshawk apply -f /ckad/goshawk/current-chipmunk-deployment.yaml
+
+//verify
+k -n goshawk get pod
