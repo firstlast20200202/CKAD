@@ -16,3 +16,6 @@ k -n ckad00018 label pod ckad00018-newpod sb-access-
 
 //verify
 k -n ckad00018 get pod --show-labels
+
+思路：
+通过network policy找到PodSelector 再通过PodSelector找到From下的PodSelector 然后把这个PodSelector label给新pod
