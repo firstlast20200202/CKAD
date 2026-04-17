@@ -5,6 +5,7 @@ ls /ckad/CKAD202206
 vi /ckad/CKAD202206/service.yaml
 deployment.spec.template.metadata.labels = service.spec.selector
 
+//deployment containerPort == service targetPort
 deployment.spec.template.spec.containers.ports.containerPort = service.spec.ports.targetPort
 
 
