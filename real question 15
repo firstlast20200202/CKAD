@@ -5,3 +5,5 @@ k -n haddock edit deployment nosql
 
 //verify 
 k -n haddock describe deployment nosql
+
+note: gotta edit the file in the route, otherwise it seems not working...
