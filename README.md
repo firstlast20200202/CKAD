@@ -7,7 +7,6 @@ repeat:
 ask: 
 
 
-10: sa in deployment file where
 
 8: rollout undo didnt work, cant find webapp
 
