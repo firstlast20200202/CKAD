@@ -6,4 +6,5 @@ k -n haddock edit deployment nosql
 //verify 
 k -n haddock describe deployment nosql
 
-note: gotta edit the file in the route, otherwise it seems not working...
+note: if edit the deployment directly, it should work, but not write in the yaml file, 
+the reason is, the yaml file is an old one already, if i want a new one, should -o yaml 
