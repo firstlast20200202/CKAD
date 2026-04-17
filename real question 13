@@ -28,4 +28,4 @@ curl -L http://ckad-ingress-test.local
 
 
 这里deployment正确 所以service file里的selector.app和targetPort要从deployment file读取，ingress file里的path要从deployment中读，service name从service file取
-Service 是通过 selector 找 Pod，Pod 的 labels 来自：Deployment → template → metadata → labels
+Service 是通过 selector 找 Pod，Pod 的 labels 来自：Deployment → template → metadata → labels, btw deployment.spec下边的selector和template中两个label必须一致
