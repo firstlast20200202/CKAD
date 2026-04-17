@@ -3,8 +3,7 @@ kubectl -n ckad00017 edit deployments.apps ckad00017-deployment
 add tier: dmz under spec.template.metadata.labels
 
 //verify
-k -n ckad00017 get pod --show-labels    //it doesnt show ?????????????????????????????
+k -n ckad00017 get pod --show-labels    
 
-**********************************************
-havent finished yet
+k -n ckad00017 expose deployment kad00017-deployment --name=rover --type=NodePort --port=81 --target-port=81 --protocol=TCP
 
