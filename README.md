@@ -6,7 +6,6 @@ repeat:
 
 ask: 
 
-12 how to user command to search secret related commands
 
 10: sa in deployment file where
 
