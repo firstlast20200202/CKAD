@@ -26,3 +26,6 @@ helm repo add bitnami http://charts.bitnami.com/bitnami
 helm search repo wordpress
 helm repo list
 
+//once the charm is found, install the charm:
+helm install [release-name] [chart-name]
+
