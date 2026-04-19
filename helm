@@ -18,3 +18,6 @@ sudo apt-get install helm
 cat /etc/*release*
 
 the templates and the values.yaml forms a helm chart, so a helm chart inlcudes templates, values.yaml and Chart.yaml.
+
+//commands
+helm search hub wordpress    //hub is a repo
