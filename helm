@@ -32,5 +32,5 @@ helm install release-1 bitnami/wordpress
 helm list
 helm uninstall my-release
 helm pull -untar bitnami/wordpress      //only download, not install
-ls wordpress
+ls wordpress      //get chart contents
 
