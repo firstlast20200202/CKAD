@@ -27,10 +27,12 @@ helm search repo wordpress
 helm repo list
 
 //once the charm is found, install the charm:
-helm install [release-name] [chart-name]
-helm install release-1 bitnami/wordpress
-helm list
-helm uninstall my-release
-helm pull -untar bitnami/wordpress      //only download, not install
-ls wordpress      //get chart contents
-
+$ helm install [release-name] [chart-name]
+$ helm install release-1 bitnami/wordpress
+$ helm list
+$ helm uninstall my-release
+$ helm pull -untar bitnami/wordpress      //only download, not install
+$ ls wordpress      //get chart contents
+Chart.yaml
+//you can update the values in the Chart.yaml file, after updating run the scripts to install a new release
+helm install release-4 ./wordpress
