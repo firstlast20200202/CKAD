@@ -29,3 +29,4 @@ helm repo list
 //once the charm is found, install the charm:
 helm install [release-name] [chart-name]
 
+helm install release-1 bitnami/wordpress
