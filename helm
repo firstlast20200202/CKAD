@@ -17,3 +17,4 @@ sudo apt-get install helm
 //get operating system
 cat /etc/*release*
 
+the templates and the values.yaml forms a helm chart
