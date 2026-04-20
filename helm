@@ -27,7 +27,7 @@ helm search repo wordpress      //search specific package from all the added rep
 helm repo list
 
 //once the charm is found, install the helm charm from a repo:
-$ helm install [release-name] [chart-name]
+$ helm install [release-name] [chart-name]      //release means package here
 $ helm install release-1 bitnami/wordpress
 $ helm list
 $ helm uninstall my-release
