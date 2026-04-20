@@ -1,0 +1,27 @@
+node selectors:
+to avoid resource waste, we label nodes 'Large', 'Small' etc. making sure that the proper size of pod will be scheduled into the right node.
+set node size in pod definition file:
+spec.nodeSelector.size
+
+then:
+$ k create -f pod-definition.yaml
+
+to set the size of a node, run
+$ k label nodes <node-name> <label-key>=<label-value>
+eg. k label nodes node01 size=Large
+
+but if we need to set Large or Medium, or Not Small these complicated values, we need to use node affinity
+
+node affinity:
+in pod definition file:
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:    //means that even though the node size is changed, the pod would ignore it and keep running on it
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: disktype          //or size
+            operator: In                            //making sure the pod would be put on a node which has spec defined in this nodeAffinity section
+            values:
+            - ssd                  //or Large
+
