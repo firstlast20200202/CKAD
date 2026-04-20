@@ -29,7 +29,7 @@ helm repo list
 //once the charm is found, install the helm charm from a repo:
 $ helm install [release-name] [chart-name]      //release means package here
 $ helm install release-1 bitnami/wordpress
-$ helm list
+$ helm list      //list packages installed using helm
 $ helm uninstall my-release
 $ helm pull -untar bitnami/wordpress      //only download, not install
 $ ls wordpress      //get chart contents
