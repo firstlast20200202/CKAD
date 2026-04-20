@@ -26,7 +26,7 @@ helm repo add bitnami http://charts.bitnami.com/bitnami
 helm search repo wordpress      //search specific package from all the added repo
 helm repo list
 
-//once the charm is found, install the charm:
+//once the charm is found, install the helm charm from a repo:
 $ helm install [release-name] [chart-name]
 $ helm install release-1 bitnami/wordpress
 $ helm list
@@ -36,3 +36,4 @@ $ ls wordpress      //get chart contents
 Chart.yaml
 //you can update the values in the Chart.yaml file, after updating run the scripts to install a new release
 helm install release-4 ./wordpress
+
