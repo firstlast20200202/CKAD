@@ -12,6 +12,7 @@ eg. k label nodes node01 size=Large
 
 but if we need to set Large or Medium, or Not Small these complicated values, we need to use node affinity
 
+
 node affinity:
 in pod definition file:
 spec:
@@ -25,3 +26,7 @@ spec:
             values:
             - ssd                  //or Large
 
+
+difference of taints and tolerance and node affinity:
+if only apply taints and tolerance, the pod would be put into a node which doesnt have any taints and tolerance;
+if only apply node affinity, an undesired pod would be put in a node which has a matching pod already.
