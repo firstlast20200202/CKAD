@@ -1,11 +1,12 @@
-set for a pod, in pod definition file:
+to avoid resource waste, we label nodes 'Large', 'Small' etc. making sure that the proper size of pod will be scheduled into the right node.
+set node size in pod definition file:
 spec.nodeSelector.size
 
-set for a node, run
+then:
+$ k create -f pod-definition.yaml
+
+to set the size of a node, run
 $ k label nodes <node-name> <label-key>=<label-value>
 eg. k label nodes node01 size=Large
-
-do above before creating the pod:
-$ k create -f pod-definition.yaml
 
 but if we need to set Large or Medium, or Not Small these complicated values, we need to use node affinity
