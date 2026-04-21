@@ -1,2 +1,10 @@
 attach a volume to the pod, the data generated or proceeded in the pod will be stored in the volume. even the pod gets deleted afterwards, the volume retains.
 kubernetes supports several data storage solutions like Amazon EBS, so in this case in the spec.volumes section of the config file, we just need to replace the related fields.
+
+docker run it \
+--name mysql
+--volume-driver rexray/ebs
+--mount svc=ebs-vol,target=/var/lib/mysql
+mysql
+
+this scriptes will create a container and attach a volume from AWS EBS, when the container exits, the data is saved in the cloud.
