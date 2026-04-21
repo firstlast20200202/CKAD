@@ -1,9 +1,9 @@
 When docker gets installed, the file system gets generated in this structure:
 /var/lib/docker, under this folder there are 4 folders:
-aufs
-containers
-image
-volumes
+/aufs
+/containers
+/image
+/volumes
 
 image layer is read only which includes source code, container layer is read and write, so if we want to update source code, the way it works is 
 to update a file which is stored in image layer and keep the updated file in container layer, so if we delete a container, the updated file will be deleted as well.
