@@ -5,6 +5,9 @@ containers
 image
 volumes
 
+image layer is read only which includes source code, container layer is read and write, so if we want to update source code, the way it works is 
+to update a file which is stored in image layer and keep the updated file in container layer, so if we delete a container, the updated file will be deleted as well.
+to keep the updated files, we add a persistent volume.
 
 When a container is destroyed, we probably want to store the data, data persistence is the process of storing data on non-volatile storage (like hard drives, SSDs, 
 or databases) so it survives system reboots, power outages, or application termination.
