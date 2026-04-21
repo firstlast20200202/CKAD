@@ -1,3 +1,5 @@
 persistent volume is compared to file system, pv is for keeping data when pods are deleted.
 
+spec.hostPath.path in PersistentVolume file wouldbe not used in production environment.
+
 hostpath as the pv type is not recommended, whereas cluster storage solutions are recommended such as AWS EBS.
